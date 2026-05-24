@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   applicationName: siteName,
   title: {
-    default: siteName,
+    default: "Alpha Tools | Crypto Calculators and Points Estimators",
     template: `%s | ${siteName}`,
   },
   description: siteDescription,
@@ -52,13 +52,20 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: siteName,
+    title: "Alpha Tools | Crypto Calculators and Points Estimators",
     description: siteDescription,
     images: ["/og-image.svg"],
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
 };
 

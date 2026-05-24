@@ -143,6 +143,28 @@ export default function Home() {
   const projectLabel = projectCount === 1 ? "project" : "projects";
 
   const featuredProjects = useMemo(() => projects, []);
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        name: "Alpha Tools",
+        url: "https://alpha-tools-tau.vercel.app/",
+        description:
+          "Crypto calculators and points estimators for researching potential rewards, farming ROI, and project activity.",
+      },
+      {
+        "@type": "ItemList",
+        name: "Alpha Tools calculators",
+        itemListElement: projects.map((project, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          name: `${project.name} calculator`,
+          url: project.productionUrl,
+        })),
+      },
+    ],
+  };
 
   useEffect(() => {
     const isWordComplete = letterCount === currentWord.length;
@@ -169,6 +191,7 @@ export default function Home() {
 
   return (
     <main className="min-h-screen overflow-hidden px-4 py-5 sm:px-6 lg:px-8">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       <div className="mx-auto flex min-h-[calc(100vh-2.5rem)] max-w-7xl flex-col">
         <header className="flex items-center justify-between gap-4 border-b border-white/10 pb-5">
           <Link className="flex items-center gap-3" href="/" aria-label="Alpha Tools home">
@@ -217,7 +240,7 @@ export default function Home() {
             </div>
           </section>
 
-          <div className="pt-10 sm:pt-14 lg:pt-16">
+          <div className="pt-6 sm:pt-10 lg:pt-12">
             <h1 className="max-w-none whitespace-nowrap text-[2rem] font-semibold leading-none tracking-normal text-white sm:text-[2.75rem] lg:text-[3.5rem] xl:text-[4rem]">
               Choose a{" "}
               <span className="inline-flex min-w-[20ch] text-emerald-300">
@@ -242,7 +265,7 @@ export default function Home() {
                   defaultChecked={index === 0}
                 />
                 <label
-                  className="category-label flex cursor-pointer items-center justify-between gap-4 p-4 sm:p-5"
+                  className="category-label flex cursor-pointer flex-col items-start justify-between gap-4 p-4 sm:flex-row sm:items-center sm:p-5"
                   htmlFor={`category-${category.name.toLowerCase()}`}
                 >
                   <span>
@@ -250,7 +273,7 @@ export default function Home() {
                     <span className="mt-1 block text-2xl font-semibold text-white">{category.name}</span>
                     <span className="mt-2 block max-w-md text-sm leading-6 text-zinc-500">{category.description}</span>
                   </span>
-                  <span className="flex items-center gap-3">
+                  <span className="flex shrink-0 items-center gap-3 self-end sm:self-auto">
                     <span
                       className={`rounded-md px-2.5 py-1 text-xs font-black uppercase ${
                         category.projects.length > 0 ? "bg-emerald-300 text-[#050505]" : "bg-white/10 text-zinc-400"
@@ -264,7 +287,7 @@ export default function Home() {
                   </span>
                 </label>
 
-                <div className="grid max-h-0 gap-3 overflow-hidden border-t border-transparent px-4 transition-all duration-300 peer-checked:max-h-[720px] peer-checked:border-white/10 peer-checked:pb-4 sm:px-5 sm:peer-checked:pb-5">
+                <div className="grid max-h-0 gap-3 overflow-hidden border-t border-transparent px-4 transition-all duration-300 peer-checked:max-h-[760px] peer-checked:border-white/10 peer-checked:pb-4 peer-checked:pt-4 sm:px-5 sm:peer-checked:pb-5 sm:peer-checked:pt-5">
                   {category.projects.length > 0 ? (
                     featuredProjects.map((project) => (
                       <a
