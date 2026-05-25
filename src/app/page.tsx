@@ -343,6 +343,18 @@ export default function Home() {
             ))}
           </div>
         </section>
+
+        <footer className="mt-4 border-t border-white/10 py-6 text-center text-sm text-zinc-500">
+          Dashboard created by{" "}
+          <a
+            className="font-semibold text-zinc-300 underline decoration-zinc-600 underline-offset-4 transition hover:text-white"
+            href="https://x.com/brelgino"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            @brelgino
+          </a>
+        </footer>
       </div>
     </main>
   );
