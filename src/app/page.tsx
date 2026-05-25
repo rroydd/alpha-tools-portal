@@ -36,10 +36,10 @@ const toolCategories = [
   },
   {
     name: "Prediction Markets",
-    status: "Active",
+    status: "Coming soon",
     description:
-      "Prediction market tools for live Polymarket events, token launch odds, FDV scenarios, and exchange event probabilities.",
-    projects,
+      "Standalone prediction market platforms and tools, including projects such as Polymarket and Kalshi, will be listed here.",
+    projects: [],
   },
   {
     name: "Cards",
