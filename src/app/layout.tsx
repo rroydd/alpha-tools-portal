@@ -5,7 +5,7 @@ import "./globals.css";
 const siteName = "Alpha Tools";
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://alpha-tools-tau.vercel.app";
 const siteDescription =
-  "Alpha Tools is a crypto research hub with airdrop calculators, points estimators, farming ROI tools, and project trackers for perps, crypto cards, L1, L2, launchpad, NFT, DePIN, AI, and yield ecosystems.";
+  "Alpha Tools is a crypto research hub with airdrop calculators, prediction market feeds, points estimators, farming ROI tools, and project trackers for perps, crypto cards, L1, L2, launchpad, NFT, DePIN, AI, and yield ecosystems.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -21,6 +21,8 @@ export const metadata: Metadata = {
     "crypto airdrop checker",
     "points calculator",
     "perps airdrop calculator",
+    "prediction market tools",
+    "Polymarket event tracker",
     "crypto cards calculator",
     "L2 airdrop tools",
     "farming ROI calculator",

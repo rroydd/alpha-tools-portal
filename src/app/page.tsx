@@ -2,11 +2,12 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import { projects } from "@/data/projects";
 
 const typewriterCategories = [
   "perps",
+  "prediction markets",
   "cards",
   "l1",
   "l2",
@@ -31,6 +32,13 @@ const toolCategories = [
     name: "Perps",
     status: "Active",
     description: "Perps calculators for perpetual futures airdrops, trading points, volume rewards, fees, and farming ROI.",
+    projects,
+  },
+  {
+    name: "Prediction Markets",
+    status: "Active",
+    description:
+      "Prediction market tools for live Polymarket events, token launch odds, FDV scenarios, and exchange event probabilities.",
     projects,
   },
   {
@@ -142,7 +150,6 @@ export default function Home() {
   const projectCount = projects.length;
   const projectLabel = projectCount === 1 ? "project" : "projects";
 
-  const featuredProjects = useMemo(() => projects, []);
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
@@ -220,7 +227,7 @@ export default function Home() {
                 </h2>
                 <p className="mt-4 max-w-4xl text-sm leading-6 text-zinc-400 sm:text-base sm:leading-7">
                   Use Alpha Tools to compare airdrop calculators, points estimators, token allocation scenarios, NFT
-                  multipliers, referral bonuses, and farming ROI across perps, cards, L1, L2, launchpad, staking,
+                  multipliers, referral bonuses, and farming ROI across perps, prediction markets, cards, L1, L2, launchpad, staking,
                   restaking, NFT, bridge, oracle, DePIN, AI, GameFi, RWA, wallet, and yield projects.
                 </p>
               </div>
@@ -289,7 +296,7 @@ export default function Home() {
 
                 <div className="grid max-h-0 gap-3 overflow-hidden border-t border-transparent px-4 transition-all duration-300 peer-checked:max-h-[760px] peer-checked:border-white/10 peer-checked:pb-4 peer-checked:pt-4 sm:px-5 sm:peer-checked:pb-5 sm:peer-checked:pt-5">
                   {category.projects.length > 0 ? (
-                    featuredProjects.map((project) => (
+                    category.projects.map((project) => (
                       <a
                         className="group grid gap-4 rounded-md border border-white/10 bg-white/[0.04] p-4 transition hover:-translate-y-0.5 hover:border-white/25 hover:bg-white/[0.08] focus:outline-none focus:ring-2 focus:ring-emerald-300 sm:grid-cols-[5.5rem_1fr_auto] sm:items-center"
                         href={project.productionUrl}
