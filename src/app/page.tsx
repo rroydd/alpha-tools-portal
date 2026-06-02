@@ -5,6 +5,9 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { projects } from "@/data/projects";
 
+const perpsProjects = projects.filter((project) => project.slug === "hibachi" || project.slug === "nado");
+const predictionMarketProjects = projects.filter((project) => project.slug === "polymarket");
+
 const typewriterCategories = [
   "perps",
   "prediction markets",
@@ -32,14 +35,14 @@ const toolCategories = [
     name: "Perps",
     status: "Active",
     description: "Perps calculators for perpetual futures airdrops, trading points, volume rewards, fees, and farming ROI.",
-    projects,
+    projects: perpsProjects,
   },
   {
     name: "Prediction Markets",
-    status: "Coming soon",
+    status: "Active",
     description:
-      "Standalone prediction market platforms and tools, including projects such as Polymarket and Kalshi, will be listed here.",
-    projects: [],
+      "Prediction market tools for Polymarket activity checks, market research, and future platforms such as Kalshi.",
+    projects: predictionMarketProjects,
   },
   {
     name: "Cards",
@@ -158,15 +161,15 @@ export default function Home() {
         name: "Alpha Tools",
         url: "https://alpha-tools-tau.vercel.app/",
         description:
-          "Crypto calculators and points estimators for researching potential rewards, farming ROI, and project activity.",
+          "Crypto calculators, points estimators, and research tools for potential rewards, farming ROI, and project activity.",
       },
       {
         "@type": "ItemList",
-        name: "Alpha Tools calculators",
+        name: "Alpha Tools projects",
         itemListElement: projects.map((project, index) => ({
           "@type": "ListItem",
           position: index + 1,
-          name: `${project.name} calculator`,
+          name: project.category === "Airdrop Calculator" ? `${project.name} calculator` : project.name,
           url: project.productionUrl,
         })),
       },
