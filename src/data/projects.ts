@@ -75,7 +75,7 @@ export const projects: Project[] = [
     status: "live",
     accent: "#1f6bff",
     logoUrl: "/logos/polymarket-logo.svg",
-    logoIconUrl: "/logos/polymarket-favicon.svg",
+    logoIconUrl: "/logos/polymarket-mark.svg",
     localUrl: "http://localhost:3002",
     productionUrl: "https://polymarket-activity-checker.vercel.app/",
     referralUrl: "https://polymarket.com/?r=brelgino",
