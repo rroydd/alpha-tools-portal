@@ -5,8 +5,9 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { projects } from "@/data/projects";
 
-const perpsProjects = projects.filter((project) => project.slug === "hibachi" || project.slug === "nado");
+const perpsProjects = projects.filter((project) => ["hibachi", "nado", "opensea"].includes(project.slug));
 const predictionMarketProjects = projects.filter((project) => project.slug === "polymarket");
+const nftProjects = projects.filter((project) => project.slug === "opensea");
 
 const typewriterCategories = [
   "perps",
@@ -82,9 +83,9 @@ const toolCategories = [
   },
   {
     name: "NFT",
-    status: "Coming soon",
+    status: "Active",
     description: "NFT airdrop calculators for holder bonuses, rarity multipliers, collection snapshots, mint costs, and reward tiers.",
-    projects: [],
+    projects: nftProjects,
   },
   {
     name: "Bridge",
