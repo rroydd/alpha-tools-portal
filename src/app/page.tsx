@@ -5,9 +5,10 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { projects } from "@/data/projects";
 
-const perpsProjects = projects.filter((project) => ["hibachi", "nado", "opensea"].includes(project.slug));
-const predictionMarketProjects = projects.filter((project) => project.slug === "polymarket");
-const nftProjects = projects.filter((project) => project.slug === "opensea");
+const perpsProjects = projects.filter((project) => ["hibachi", "nado", "dreamcash", "risex"].includes(project.slug));
+const predictionMarketProjects = projects.filter((project) => ["polymarket", "predictfun"].includes(project.slug));
+const nftProjects = projects.filter((project) => ["opensea", "dyli"].includes(project.slug));
+const pointsProjects = projects.filter((project) => ["nansen", "abstract"].includes(project.slug));
 
 const typewriterCategories = [
   "perps",
@@ -32,6 +33,12 @@ const typewriterCategories = [
 ];
 
 const toolCategories = [
+  {
+    name: "Points",
+    status: "Active",
+    description: "Points and XP estimators for ecosystem usage, quests, badges, subscriptions, staking, and referrals.",
+    projects: pointsProjects,
+  },
   {
     name: "Perps",
     status: "Active",
