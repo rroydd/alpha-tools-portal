@@ -23,15 +23,15 @@ export type Project = {
 export const projects: Project[] = [
   {
     slug:"nansen",name:"Nansen Points Calculator",shortName:"Nansen",category:"Points",description:"Calculate official-rate NXP from perps volume and combine it with staking, subscription, referral and quest points.",
-    benefits:[{label:"official trading rate",tone:"emerald"},{label:"live tier check",tone:"sky"},{label:"cost tracking",tone:"violet"}],status:"live",accent:"#00FFA7",logoUrl:"/logos/nansen.png",logoIconUrl:"/logos/nansen.png",localUrl:"http://localhost:3004",productionUrl:"https://nansen-points-calculator-brelgino.vercel.app/",referralUrl:"https://app.nansen.ai/points",docsUrl:"https://docs.nansen.ai/api/points"
+    benefits:[{label:"official trading rate",tone:"emerald"},{label:"live tier check",tone:"sky"},{label:"cost tracking",tone:"violet"}],status:"live",accent:"#00FFA7",logoUrl:"/logos/nansen.png",logoIconUrl:"/logos/nansen.png",localUrl:"http://localhost:3004",productionUrl:"https://nansen-points-calculator-brelgino.vercel.app/",referralUrl:"https://nsn.ai/brelgin",docsUrl:"https://docs.nansen.ai/api/points"
   },
   {
     slug:"predictfun",name:"Predict Points Estimator",shortName:"Predict.fun",category:"Prediction Markets",description:"Compare weekly prediction-market activity across trading, open interest, useful liquidity and market breadth.",
-    benefits:[{label:"liquidity scenario",tone:"emerald"},{label:"open interest",tone:"sky"},{label:"official profile check",tone:"violet"}],status:"live",accent:"#F6F7F8",logoUrl:"/logos/predictfun.png",logoIconUrl:"/logos/predictfun.png",localUrl:"http://localhost:3005",productionUrl:"https://predictfun-points-estimator-brelgino.vercel.app/",referralUrl:"https://predict.fun/",docsUrl:"https://predict.fun/points"
+    benefits:[{label:"liquidity scenario",tone:"emerald"},{label:"open interest",tone:"sky"},{label:"official profile check",tone:"violet"}],status:"live",accent:"#F6F7F8",logoUrl:"/logos/predictfun.png",logoIconUrl:"/logos/predictfun.png",localUrl:"http://localhost:3005",productionUrl:"https://predictfun-points-estimator-brelgino.vercel.app/",referralUrl:"https://predict.fun?ref=5D64A",docsUrl:"https://predict.fun/points"
   },
   {
     slug:"dreamcash",name:"Dreamcash XP Calculator",shortName:"Dreamcash",category:"Perps",description:"Calculate Season 1 XP using the published Mobile and WebApp volume rates and your Founder multiplier.",
-    benefits:[{label:"official XP rates",tone:"orange"},{label:"live HL wallet data",tone:"sky"},{label:"fees & positions",tone:"violet"}],status:"live",accent:"#56C7FF",logoUrl:"/logos/dreamcash.svg",logoIconUrl:"/logos/dreamcash.svg",localUrl:"http://localhost:3006",productionUrl:"https://dreamcash-xp-calculator-brelgino.vercel.app/",referralUrl:"https://app.dreamcash.net/",docsUrl:"https://docs.dreamcash.xyz/season-1"
+    benefits:[{label:"official XP rates",tone:"orange"},{label:"live HL wallet data",tone:"sky"},{label:"fees & positions",tone:"violet"}],status:"live",accent:"#56C7FF",logoUrl:"/logos/dreamcash.svg",logoIconUrl:"/logos/dreamcash.svg",localUrl:"http://localhost:3006",productionUrl:"https://dreamcash-xp-calculator-brelgino.vercel.app/",referralUrl:"https://www.dreamcash.xyz/share?code=0PWE34",docsUrl:"https://docs.dreamcash.xyz/season-1"
   },
   {
     slug:"abstract",name:"Abstract XP Estimator",shortName:"Abstract",category:"Points",description:"Model weekly Abstract ecosystem activity across apps, transactions, badges and your Portal multiplier.",
@@ -39,7 +39,7 @@ export const projects: Project[] = [
   },
   {
     slug:"dyli",name:"DYLI Rewards Estimator",shortName:"DYLI",category:"NFT Activity",description:"Build a collector activity scenario from purchases, marketplace orders, Dabble plays and quests.",
-    benefits:[{label:"collector score",tone:"violet"},{label:"Dabble activity",tone:"orange"},{label:"official profile check",tone:"sky"}],status:"live",accent:"#FFD51C",logoUrl:"/logos/dyli.png",logoIconUrl:"/logos/dyli.png",localUrl:"http://localhost:3008",productionUrl:"https://dyli-rewards-estimator-brelgino.vercel.app/",referralUrl:"https://www.dyli.io/rewards",docsUrl:"https://docs.dyli.io/"
+    benefits:[{label:"collector score",tone:"violet"},{label:"Dabble activity",tone:"orange"},{label:"official profile check",tone:"sky"}],status:"live",accent:"#FFD51C",logoUrl:"/logos/dyli.png",logoIconUrl:"/logos/dyli.png",localUrl:"http://localhost:3008",productionUrl:"https://dyli-rewards-estimator-brelgino.vercel.app/",referralUrl:"https://www.dyli.io/?code=dr670541",docsUrl:"https://docs.dyli.io/"
   },
   {
     slug:"risex",name:"RISEx Points Estimator",shortName:"RISEx",category:"Perps",description:"Compare Ignite Season 1 contribution from trading, liquidity, position management and active referrals.",
